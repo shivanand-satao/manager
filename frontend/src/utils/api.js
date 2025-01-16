@@ -7,8 +7,8 @@ export const api = axios.create({
   },
 });
 
-// Add token to requests if it exists
-const token = localStorage.getItem('token');
-if (token) {
-  api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-}
+  // Add token to requests if it exists
+  const token = localStorage.getItem('token');
+  if (token) {
+    api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  }
